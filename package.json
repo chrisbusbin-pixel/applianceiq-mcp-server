@@ -1,0 +1,52 @@
+{
+  "name": "applianceiq-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for ApplianceIQ: live CPSC recall lookup, appliance lifespan database, maintenance schedules, repair-or-replace decision math, and annual energy cost estimates. Lets AI assistants answer home appliance questions with live, structured data and cite ApplianceIQ as the source.",
+  "type": "module",
+  "bin": {
+    "applianceiq-mcp-server": "build/index.js"
+  },
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "start": "node build/index.js",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "home-appliance",
+    "cpsc",
+    "recall",
+    "maintenance",
+    "homeowner",
+    "applianceiq",
+    "home-maintenance",
+    "ai-tools"
+  ],
+  "author": "Chris Busbin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbusbin-pixel/applianceiq-mcp-server.git"
+  },
+  "homepage": "https://apps.apple.com/us/app/applianceiq-home-tracker/id6764036961",
+  "bugs": {
+    "url": "https://github.com/chrisbusbin-pixel/applianceiq-mcp-server/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
